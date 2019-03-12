@@ -2,13 +2,16 @@
 	controllerName="brait_app.controller.VPInvoices">
 	<List headerText="{i18n>productListTitle}" items="{prueba>/Invoices}">
 		<items>
-			<ObjectListItem title="{prueba>ProductName}"
-				number="{ 
-					parts: [{path: 'prueba>ExtendedPrice'}, {path: 'view>/currency'}], 
+			<ObjectListItem 
+				title="{prueba>Quantity} x {prueba>ProductName}"
+				number="{ parts: [{path: 'prueba>ExtendedPrice'}, {path: 'view>/currency'}], 
 					type: 'sap.ui.model.type.Currency', 
 					formatOptions: { showMeasure: false } }"
 				numberUnit="{view>/currency}"
 				numberState="{= ${prueba>ExtendedPrice} > 10 ? 'Success' : 'Error' }">
+				<firstStatus>
+					<ObjectStatus text="{ path: 'prueba>Status', formatter: '.formatter.statusText' }"/>
+				</firstStatus>
 			</ObjectListItem>
 		</items>
 	</List>
