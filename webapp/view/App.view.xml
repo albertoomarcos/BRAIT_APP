@@ -16,21 +16,7 @@ controllerName="brait_app.controller.App">
 					class="sapUiResponsiveContentPadding"> 
 					<items> 
 						<IconTabFilter id="start" text="{i18n>gettingStartedFilter}">  
-							<Carousel> 
-								<pages>
-									<Image src="https://softwarepara.net/wp-content/uploads/2018/06/sap-es-un-erp.png" 
-									height="600px"/> 
-									<Image src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/86/Wikipedia_Hello_World_Graphic.svg/2000px-Wikipedia_Hello_World_Graphic.svg.png" height="600px"/>
-								</pages> 
-							</Carousel>
-							<Button
-								text="{i18n>showHelloButtonText}" 
-								press="onShowHello"/> 
-							<Input 
-								value="{helloPanel>/recipient/name}" 
-								description="Hello {helloPanel>/recipient/name}" 
-								valueLiveUpdate="true" 
-								width="60%"/> 
+							<mvc:XMLView viewName="brait_app.view.VPImages"/>
 						</IconTabFilter>
 						<IconTabFilter id="layouts" text="{i18n>layoutFilter}"> 
 							<mvc:XMLView viewName="brait_app.view.Form1"/>
