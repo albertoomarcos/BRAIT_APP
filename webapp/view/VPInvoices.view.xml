@@ -7,7 +7,9 @@
 					parts: [{path: 'prueba>ExtendedPrice'}, {path: 'view>/currency'}], 
 					type: 'sap.ui.model.type.Currency', 
 					formatOptions: { showMeasure: false } }"
-				numberUnit="{view>/currency}"/>
+				numberUnit="{view>/currency}"
+				numberState="{= ${prueba>ExtendedPrice} > 10 ? 'Success' : 'Error' }">
+			</ObjectListItem>
 		</items>
 	</List>
 </mvc:View>
