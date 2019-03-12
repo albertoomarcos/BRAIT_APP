@@ -1,6 +1,18 @@
 <mvc:View displayBlock="true" xmlns:mvc="sap.ui.core.mvc" xmlns:core="sap.ui.core" xmlns="sap.m"
 	controllerName="brait_app.controller.VPInvoices">
-	<List headerText="{i18n>productListTitle}" items="{prueba>/Invoices}">
+	<List 
+	    id="invoiceList"
+    	class="sapUiResponsiveMargin"
+    	width="auto"
+		headerText="{i18n>productListTitle}" 
+		items="{prueba>/Invoices}">
+		<headerToolbar>
+        	<Toolbar>
+            	<Title text="{i18n>invoiceListTitle}"/>
+            	<ToolbarSpacer/>
+            	<SearchField width="50%" search="onFilterInvoices"/>
+        	</Toolbar>
+    	</headerToolbar>
 		<items>
 			<ObjectListItem 
 				title="{prueba>Quantity} x {prueba>ProductName}"
