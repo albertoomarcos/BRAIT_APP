@@ -1,0 +1,38 @@
+<mvc:View displayBlock="true" xmlns:mvc="sap.ui.core.mvc"
+	xmlns:core="sap.ui.core" xmlns:l="sap.ui.layout"
+	xmlns:f="sap.ui.layout.form" xmlns="sap.m"
+	controllerName="brait_app.controller.Form1">
+
+	<MessageStrip type="Information" showIcon="true"
+		text="Brait consulting group!!" />
+	<f:SimpleForm id="simpleFormChange" title="Address"
+		editable="true" class="editableForm sapUiSmallMarginTopBottom">
+		<f:content>
+			<Label text="{i18n>layoutFormName}" />
+			<Input value="{address>/Name}" />
+			<Label text="{i18n>layoutFormStreet}" />
+			<Input value="{address>/Street}" />
+			<Label text="{i18n>layoutFormHouseNumber}" />
+			<Input value="{address>/HouseNumber}" />
+			<Label text="{i18n>layoutFormZIPCode}" />
+			<Input value="{address>/ZIPCode}" />
+			<Label text="{i18n>layoutFormCity}" />
+			<Input value="{address>/City}" />
+			<Label text="{i18n>layoutFormCountry}" />
+			<Select>
+				<items>
+					<core:Item text="{i18n>layoutCountryGermany}" />
+					<core:Item text="{i18n>layoutCountryUSA}" />
+					<core:Item text="{i18n>layoutCountryEngland}" />
+				</items>
+			</Select>
+		</f:content>
+	</f:SimpleForm>
+	<Toolbar>
+		<ToolbarSpacer />
+		<Button text="{i18n>layoutPublishButton}"
+			icon="sap-icon://outbox" type="Accept" />
+		<Button text="{i18n>layoutDraftButton}" icon="sap-icon://save" />
+	</Toolbar>
+
+</mvc:View>

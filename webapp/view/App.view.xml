@@ -19,7 +19,7 @@ controllerName="brait_app.controller.App">
 							<Carousel> 
 								<pages>
 									<Image src="https://softwarepara.net/wp-content/uploads/2018/06/sap-es-un-erp.png" 
-									height="200px"/> 
+									height="600px"/> 
 									<Image src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/86/Wikipedia_Hello_World_Graphic.svg/2000px-Wikipedia_Hello_World_Graphic.svg.png" height="600px"/>
 								</pages> 
 							</Carousel>
@@ -33,42 +33,7 @@ controllerName="brait_app.controller.App">
 								width="60%"/> 
 						</IconTabFilter>
 						<IconTabFilter id="layouts" text="{i18n>layoutFilter}"> 
-							<MessageStrip type="Information" showIcon="true"
-								text="Brait consulting group" />
-							<f:SimpleForm id="simpleFormChange" title="Address"
-								editable="true" 
-								class="editableForm sapUiSmallMarginTopBottom">
-								<f:content>
-									<Label text="{i18n>layoutFormName}" />
-									<Input value="{address>/Name}" />
-									<Label text="{i18n>layoutFormStreet}" />
-									<Input value="{address>/Street}" />
-									<Label text="{i18n>layoutFormHouseNumber}" />
-									<Input value="{address>/HouseNumber}" />
-									<Label text="{i18n>layoutFormZIPCode}" />
-									<Input value="{address>/ZIPCode}" />
-									<Label text="{i18n>layoutFormCity}" />
-									<Input value="{address>/City}" />
-									<Label text="{i18n>layoutFormCountry}" />
-									<Select>
-										<items>
-											<core:Item text="{i18n>layoutCountryGermany}" />
-											<core:Item text="{i18n>layoutCountryUSA}" />
-											<core:Item text="{i18n>layoutCountryEngland}" />
-										</items>
-									</Select>
-								</f:content>
-							</f:SimpleForm>
-							<Toolbar>
-								<ToolbarSpacer />
-								<Button 
-									text="{i18n>layoutPublishButton}" 
-									icon="sap-icon://outbox" 
-									type="Accept" />
-								<Button 
-									text="{i18n>layoutDraftButton}" 
-									icon="sap-icon://save"/>
-							</Toolbar>
+							<mvc:XMLView viewName="brait_app.view.Form1"/>
 						</IconTabFilter>
 						<IconTabFilter text="{i18n>dataBindingFilter}" key="db">
 							<content> 
