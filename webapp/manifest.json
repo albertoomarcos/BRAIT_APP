@@ -5,7 +5,7 @@
 		"id": "miaplicacion.myapp",
 		"type": "application",
 		"title": "{{appTitle}}",
-		"i18n": "i18n/i18n.properties", 
+		"i18n": "i18n/i18n.properties",
 		"description": "{{appDescription}}",
 		"applicationVersion": {
 			"version": "1.0.0"
@@ -52,23 +52,26 @@
 		"models": {
 			"helloPanel": {
 				"type": "sap.ui.model.json.JSONModel",
-				"uri": "model/HelloPanel.json" 
+				"uri": "model/HelloPanel.json"
 			},
 			"i18n": {
 				"type": "sap.ui.model.resource.ResourceModel",
-				"settings": { 
+				"settings": {
 					"bundleName": "brait_app.i18n.i18n"
 				}
 			},
-			"address": { 
-				"type": "sap.ui.model.json.JSONModel", 
-				"uri": "model/Address.json" 
+			"address": {
+				"type": "sap.ui.model.json.JSONModel",
+				"uri": "model/Address.json"
 			},
 			"prueba": {
-				"type": "sap.ui.model.json.JSONModel", 
-				"uri": "model/facturas.json" 
+				"type": "sap.ui.model.json.JSONModel",
+				"uri": "model/facturas.json"
 			}
 		}
-		
+	},
+	"sap.platform.hcp": {
+		"uri": "webapp",
+		"_version": "1.1.0"
 	}
-} 
+}
