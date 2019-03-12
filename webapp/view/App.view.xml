@@ -22,28 +22,7 @@ controllerName="brait_app.controller.App">
 							<mvc:XMLView viewName="brait_app.view.Form1"/>
 						</IconTabFilter>
 						<IconTabFilter text="{i18n>dataBindingFilter}" key="db">
-							<content> 
-								<List 
-									headerText="{i18n>productListTitle}" 
-									items="{prueba>/Invoices}"> 
-										<items> 
-											<ObjectListItem 
-											title="{prueba>ProductName}" 
-											number="{prueba>ExtendedPrice}" 
-											intro="{prueba>Quantity}" /> 
-										</items> 
-								</List> 
-								<List
-									headerText="{i18n>invoiceListTitle}"
-									class="sapUiResponsiveMargin" width="auto" items="{prueba>/Invoices}">
-											
-										<items>
-											<ObjectListItem title="{prueba>ProductName}"
-													number="{prueba>ExtendedPrice}" intro="{prueba>Quantity}" />
-										</items>
-									
-								</List>
-							</content> 
+							<mvc:XMLView viewName="brait_app.view.VPInvoices"/>
 						</IconTabFilter>
 					</items>
 				</IconTabBar> 

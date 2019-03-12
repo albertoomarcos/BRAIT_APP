@@ -1,0 +1,13 @@
+<mvc:View displayBlock="true" xmlns:mvc="sap.ui.core.mvc"
+	xmlns:core="sap.ui.core"  xmlns="sap.m"
+	controllerName="brait_app.controller.VPInvoices">
+	
+		<List headerText="{i18n>productListTitle}"
+			items="{prueba>/Invoices}">
+			<items>
+				<ObjectListItem title="{prueba>ProductName}"
+					number="{prueba>ExtendedPrice}" intro="{prueba>Quantity}" />
+			</items>
+		</List>	
+	
+</mvc:View>
