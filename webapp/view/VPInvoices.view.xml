@@ -1,5 +1,6 @@
 <mvc:View displayBlock="true" xmlns:mvc="sap.ui.core.mvc" xmlns:core="sap.ui.core" xmlns="sap.m"
 	controllerName="brait_app.controller.VPInvoices">
+	<Shell>
 	<List 
 	    id="invoiceList"
     	class="sapUiResponsiveMargin"
@@ -27,4 +28,5 @@
 			</ObjectListItem>
 		</items>
 	</List>
+	</Shell>
 </mvc:View>
