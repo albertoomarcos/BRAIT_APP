@@ -1,37 +1,32 @@
-<mvc:View displayBlock="true" xmlns:mvc="sap.ui.core.mvc" xmlns:core="sap.ui.core" xmlns="sap.m"
+<mvc:View displayBlock="true" xmlns:mvc="sap.ui.core.mvc" xmlns:core="sap.ui.core" xmlns="sap.m" xmlns:l="sap.ui.layout"
 	controllerName="brait_app.controller.VPInvoices">
-	<Shell>
-	<List 
-	    id="invoiceList"
-    	class="sapUiResponsiveMargin"
-    	width="auto"
-		headerText="{i18n>productListTitle}" 
-		items="{
-			path: 'prueba>/Invoices',
-			sorter: {
-				path: 'ShipperName',
-				group: true}
-			}">
+	<List id="invoiceList" class="sapUiResponsiveMargin" width="auto" headerText="{i18n>productListTitle}"
+		items="{ path: 'prueba>/Invoices', sorter: { path: 'ShipperName', group: true} }" growing="true" growingThreshold="5"
+		growingScrollToLoad="false">
 		<headerToolbar>
-        	<Toolbar>
-            	<Title text="{i18n>invoiceListTitle}"/>
-            	<ToolbarSpacer/>
-            	<SearchField width="50%" search="onFilterInvoices"/>
-        	</Toolbar>
-    	</headerToolbar>
+			<Toolbar>
+				<Title text="{i18n>invoiceListTitle}"/>
+				<ToolbarSpacer/>
+				<SearchField width="50%" search="onFilterInvoices"/>
+			</Toolbar>
+		</headerToolbar>
 		<items>
-			<ObjectListItem 
-				title="{prueba>Quantity} x {prueba>ProductName}"
-				number="{ parts: [{path: 'prueba>ExtendedPrice'}, {path: 'view>/currency'}], 
-					type: 'sap.ui.model.type.Currency', 
-					formatOptions: { showMeasure: false } }"
-				numberUnit="{view>/currency}"
-				numberState="{= ${prueba>ExtendedPrice} > 10 ? 'Success' : 'Error' }">
+			<ObjectListItem press="onItemSelected" type="Active" title="{prueba>Quantity} x {prueba>ProductName}"
+				number="{ parts: [{path: 'prueba>ExtendedPrice'}, {path: 'view>/currency'}], type: 'sap.ui.model.type.Currency', formatOptions: { showMeasure: false } }"
+				numberUnit="{view>/currency}" numberState="{= ${prueba>ExtendedPrice} > 10 ? 'Success' : 'Error' }">
 				<firstStatus>
 					<ObjectStatus text="{ path: 'prueba>Status', formatter: '.formatter.statusText' }"/>
+					
 				</firstStatus>
 			</ObjectListItem>
 		</items>
 	</List>
-	</Shell>
+	<Panel id="productDetailsPanel" headerText="{i18n>productDetailPanelHeader}" visible="true">
+		<l:Grid>
+			<Text text="{i18n>productDetailPanelID}: {prueba>ProductID}"/>
+			<Text text="{i18n>productDetailPanelName}: {prueba>ProductName}"/>
+			<Text text="{i18n>productDetailPanelDescription}: {Descripcion}"/>
+			<Text text="{i18n>productDetailPanelPrice}: {ExtendedPrice}"/>
+		</l:Grid>
+	</Panel>
 </mvc:View>

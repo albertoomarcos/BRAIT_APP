@@ -1,35 +1,26 @@
-<mvc:View 
-displayBlock="true" 
-xmlns:mvc="sap.ui.core.mvc" 
-xmlns:core="sap.ui.core"
-xmlns:l="sap.ui.layout" 
-xmlns:f="sap.ui.layout.form" 
-xmlns="sap.m"
-controllerName="brait_app.controller.App">
-<Shell>
-<App> 
-	<pages> 
-		<Page title="openSAP - Developing with SAPUI5"> 
-			<content> 
-				<IconTabBar 
-					id="idTopLevelIconTabBar"
-					selectedKey="db"
-					class="sapUiResponsiveContentPadding"> 
-					<items> 
-						<IconTabFilter id="start" text="{i18n>gettingStartedFilter}">  
-							<mvc:XMLView viewName="brait_app.view.VPImages"/>
-						</IconTabFilter>
-						<IconTabFilter id="layouts" text="{i18n>layoutFilter}"> 
-							<mvc:XMLView viewName="brait_app.view.Form1"/>
-						</IconTabFilter>
-						<IconTabFilter text="{i18n>dataBindingFilter}" key="db">
-							<mvc:XMLView viewName="brait_app.view.VPInvoices"/>
-						</IconTabFilter>
-					</items>
-				</IconTabBar> 
-			</content> 
-		</Page> 
-	</pages> 
-</App> 
-</Shell>	
-</mvc:View> 
+<mvc:View displayBlock="true" xmlns:mvc="sap.ui.core.mvc" xmlns:core="sap.ui.core" xmlns:l="sap.ui.layout" xmlns:f="sap.ui.layout.form"
+	xmlns="sap.m" controllerName="brait_app.controller.App">
+	<Shell>
+		<App>
+			<pages>
+				<Page title="openSAP - Developing with SAPUI5">
+					<content>
+						<IconTabBar id="idTopLevelIconTabBar" selectedKey="db" class="sapUiResponsiveContentPadding">
+							<items>
+								<IconTabFilter id="start" text="{i18n>gettingStartedFilter}">
+									<mvc:XMLView viewName="brait_app.view.VPImages"/>
+								</IconTabFilter>
+								<IconTabFilter id="layouts" text="{i18n>layoutFilter}">
+									<mvc:XMLView viewName="brait_app.view.Form1"/>
+								</IconTabFilter>
+								<IconTabFilter text="{i18n>dataBindingFilter}" key="db">
+									<mvc:XMLView viewName="brait_app.view.VPInvoices"/>
+								</IconTabFilter>
+							</items>
+						</IconTabBar>
+					</content>
+				</Page>
+			</pages>
+		</App>
+	</Shell>
+</mvc:View>

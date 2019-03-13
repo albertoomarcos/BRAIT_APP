@@ -1,52 +1,64 @@
 {
   "Invoices": [
 	{
+	  "ProductID":"000001",
 	  "ProductName": "Pineapple",
 	  "Quantity": 21,
 	  "ExtendedPrice": 87.2000,
 	  "ShipperName": "Fun Inc.",
 	  "ShippedDate": "2015-04-01T00:00:00",
-	  "Status": "A"
+	  "Status": "A",
+	  "Descripcion":"Ananas comosus, la piña, el ananá, ananás o matzatli, es una planta perenne de la familia de las bromeliáceas, nativa de América del Sur. Esta especie, de escaso porte y con hojas duras y lanceoladas desde la cola hasta 1 m de largo, fructifica una vez cada tres años produciendo un único fruto fragante y dulce, muy apreciado en gastronomía."
 	},
 	{
+	  "ProductID":"000002",
 	  "ProductName": "Milk",
 	  "Quantity": 4,
 	  "ExtendedPrice": 9.99999,
 	  "ShipperName": "ACME",
 	  "ShippedDate": "2015-02-18T00:00:00",
-	  "Status": "B"
+	  "Status": "B",
+	  "Descripcion":"La leche (en latín: lac, ‘leche’)? es una secreción nutritiva de color blanquecino opaco producida por las células secretoras de las glándulas mamarias o mamas de las hembras de los mamíferos, incluidos los monotremas.Su principal función es la de nutrir a las crías hasta que sean capaces de digerir otros alimentos, además de proteger su tracto gastrointestinal contra patógenos, toxinas e inflamación y contribuir a su salud metabólica regulando los "
 	},
 	{
+	  "ProductID":"000003",
 	  "ProductName": "Canned Beans",
 	  "Quantity": 3,
 	  "ExtendedPrice": 6.85000,
 	  "ShipperName": "ACME",
 	  "ShippedDate": "2015-03-02T00:00:00",
-	  "Status": "B"
+	  "Status": "B",
+	  "Descripcion":"Phaseolus vulgaris es la especie más conocida del género Phaseolus en la familia Fabaceae. Sus semillas, y por extensión la propia planta, reciben en el mundo hispanohablante diversos nombres según el país o la región, pero los más comunes son fréjo"
 	},
 	{
+	  "ProductID":"000004",
 	  "ProductName": "Salad",
 	  "Quantity": 2,
 	  "ExtendedPrice": 8.8000,
 	  "ShipperName": "ACME",
 	  "ShippedDate": "2015-04-12T00:00:00",
-	  "Status": "C"
+	  "Status": "C",
+	  "Descripcion":"Una ensalada es, en líneas generales, un plato frío con hortalizas mezcladas, cortadas en trozos y aderezadas, fundamentalmente con sal, aceite vegetal y vinagre. Puede tomarse como plato único, antes o después del plato principal e incluso como complemento. Debe tener por lo menos dos ingredientes u hortalizas."
 	},
 	{
+	  "ProductID":"000005",
 	  "ProductName": "Bread",
 	  "Quantity": 1,
 	  "ExtendedPrice": 2.71212,
 	  "ShipperName": "Fun Inc.",
 	  "ShippedDate": "2015-01-27T00:00:00",
-	  "Status": "A"
+	  "Status": "A",
+	  "Descripcion":"El pan (del latín panis) es un alimento básico que forma parte de la dieta tradicional en Europa, Medio Oriente, India, América y Oceanía. Se suele preparar mediante el horneado de una masa, elaborada fundamentalmente con harina de cereales, sal y agua. La mezcla, en la mayoría de las ocasiones, suele contener levaduras para que fermente la masa y sea más esponjosa y tierna."
 	},
 	{
+	  "ProductID":"000006",
 	  "ProductName": "Pineapple",
 	  "Quantity": 2,
 	  "ExtendedPrice": 23.2000,
 	  "ShipperName": "ACME",
 	  "ShippedDate": "2019-03-01T00:00:00",
-	  "Status": "A"
+	  "Status": "A",
+	  "Descripcion":"Ananas comosus, la piña, el ananá, ananás o matzatli, es una planta perenne de la familia de las bromeliáceas, nativa de América del Sur. Esta especie, de escaso porte y con hojas duras y lanceoladas desde la cola hasta 1 m de largo, fructifica una vez cada tres años produciendo un único fruto fragante y dulce, muy apreciado en gastronomía."
 	}
   ]
 }
