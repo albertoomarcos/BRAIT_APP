@@ -11,22 +11,14 @@
 			</Toolbar>
 		</headerToolbar>
 		<items>
-			<ObjectListItem press="onItemSelected" type="Active" title="{prueba>Quantity} x {prueba>ProductName}"
+			<ObjectListItem 
+				press="onPress" type="Navigation" title="{prueba>Quantity} x {prueba>ProductName}"
 				number="{ parts: [{path: 'prueba>ExtendedPrice'}, {path: 'view>/currency'}], type: 'sap.ui.model.type.Currency', formatOptions: { showMeasure: false } }"
 				numberUnit="{view>/currency}" numberState="{= ${prueba>ExtendedPrice} > 10 ? 'Success' : 'Error' }">
 				<firstStatus>
 					<ObjectStatus text="{ path: 'prueba>Status', formatter: '.formatter.statusText' }"/>
-					
 				</firstStatus>
 			</ObjectListItem>
 		</items>
 	</List>
-	<Panel id="productDetailsPanel" headerText="{i18n>productDetailPanelHeader}" visible="true">
-		<l:Grid>
-			<Text text="{i18n>productDetailPanelID}: {prueba>ProductID}"/>
-			<Text text="{i18n>productDetailPanelName}: {prueba>ProductName}"/>
-			<Text text="{i18n>productDetailPanelDescription}: {Descripcion}"/>
-			<Text text="{i18n>productDetailPanelPrice}: {ExtendedPrice}"/>
-		</l:Grid>
-	</Panel>
 </mvc:View>

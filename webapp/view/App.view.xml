@@ -14,7 +14,8 @@
 									<mvc:XMLView viewName="brait_app.view.Form1"/>
 								</IconTabFilter>
 								<IconTabFilter text="{i18n>dataBindingFilter}" key="db">
-									<mvc:XMLView viewName="brait_app.view.VPInvoices"/>
+									<!--<mvc:XMLView viewName="brait_app.view.VPInvoices"/>-->
+									<App class="myAppDemoWT" id="app"/>
 								</IconTabFilter>
 							</items>
 						</IconTabBar>

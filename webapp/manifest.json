@@ -68,6 +68,35 @@
 				"type": "sap.ui.model.json.JSONModel",
 				"uri": "model/facturas.json"
 			}
+		},
+		"routing": {
+			"config": {
+				"routerClass": "sap.m.routing.Router",
+				"viewType": "XML",
+				"viewPath": "brait_app.view",
+				"controlId": "app",
+				"controlAggregation": "pages",
+				"async": true
+			},
+			"routes": [{
+				"pattern": "",
+				"name": "overview",
+				"target": "overview"
+			}, {
+				"pattern": "detail",
+				"name": "detail",
+				"target": "detail"
+			}],
+			"targets": {
+				"overview": {
+					"viewID": "overview",
+					"viewName": "Overview"
+				},
+				"detail": {
+					"viewId": "detail",
+					"viewName": "Detail"
+				}
+			}
 		}
 	},
 	"sap.platform.hcp": {
