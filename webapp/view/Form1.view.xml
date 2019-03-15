@@ -24,6 +24,9 @@
 					<core:Item text="{i18n>layoutCountryGermany}" />
 					<core:Item text="{i18n>layoutCountryUSA}" />
 					<core:Item text="{i18n>layoutCountryEngland}" />
+					<core:Item text="{i18n>layoutCountrySpain}" />
+					<core:Item text="{i18n>layoutCountryFrance}" />
+					<core:Item text="{i18n>layoutCountryItaly}" />
 				</items>
 			</Select>
 		</f:content>
