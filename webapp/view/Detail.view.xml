@@ -1,9 +1,10 @@
-<mvc:View
-	xmlns="sap.m"
-	xmlns:mvc="sap.ui.core.mvc">
-	<Page
-		title="{i18n>detailPageTitle}">
-		<ObjectHeader
-			title="Invoice"/>
+<mvc:View controllerName="brait_app.controller.Detail" xmlns="sap.m" xmlns:mvc="sap.ui.core.mvc" xmlns:l="sap.ui.layout">
+	<Page title="{i18n>detailPageTitle}" showNavButton="true" navButtonPress="onNavBack">
+		<l:Grid>
+			<Text text="{i18n>productDetailPanelID}: {prueba>ProductID}"/>
+			<Text text="{i18n>productDetailPanelName}: {prueba>ProductName}"/>
+			<Text text="{i18n>productDetailPanelDescription}: {prueba>Descripcion}"/>
+			<Text text="{i18n>productDetailPanelPrice}: {prueba>ExtendedPrice}"/>
+		</l:Grid>
 	</Page>
 </mvc:View>
