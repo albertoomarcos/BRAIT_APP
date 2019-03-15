@@ -1,4 +1,8 @@
-<mvc:View controllerName="brait_app.controller.Detail" xmlns="sap.m" xmlns:mvc="sap.ui.core.mvc" xmlns:l="sap.ui.layout">
+<mvc:View 
+controllerName="brait_app.controller.Detail" 
+xmlns="sap.m" xmlns:mvc="sap.ui.core.mvc" 
+xmlns:l="sap.ui.layout"
+xmlns:wt="brait_app.control">
 	<Page title="{i18n>detailPageTitle}" showNavButton="true" navButtonPress="onNavBack">
 		<l:Grid>
 			<Text text="{i18n>productDetailPanelID}: {prueba>ProductID}"/>
@@ -6,5 +10,6 @@
 			<Text text="{i18n>productDetailPanelDescription}: {prueba>Descripcion}"/>
 			<Text text="{i18n>productDetailPanelPrice}: {prueba>ExtendedPrice}"/>
 		</l:Grid>
+		<wt:ProductRating id="rating" class="sapUiSmallMarginBeginEnd" change="onRatingChange"/>
 	</Page>
 </mvc:View>
