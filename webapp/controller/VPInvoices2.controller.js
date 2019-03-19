@@ -11,8 +11,9 @@ sap.ui.define([
 			// set explored app's demo model on this sample
 			//https://brait.cc/scpdev/facturas.json
 			//var oModel = new JSONModel(sap.ui.require.toUrl("brait.cc/scpdev") + "/facturas.json");
-			var oModel = new JSONModel(sap.ui.require.toUrl("sap/ui/demo/mock") + "/products.json");
-			this.getView().setModel(oModel);
+		//	var oModel = new JSONModel();
+		//	oModel.loadData("brait.cc/scpdev/facturas.json");
+		//	this.getView().setModel(oModel);
 		},
 
 		handleReject: function (evt) {

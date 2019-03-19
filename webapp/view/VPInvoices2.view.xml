@@ -6,11 +6,11 @@
 	xmlns:l="sap.ui.layout"
 	controllerName="brait_app.controller.VPInvoices2">
 	<List
-		headerText="Facturitas"
-		items="{/Invoices}" >
+		headerText="Facturas json"
+		items="{jsonWEB>/Invoices}" >
 		<StandardListItem
-			title="{ProductName}"
-			description="{Descripcion}"
+			title="{jsonWEB>ProductName}"
+			description="{jsonWEB>Descripcion}"
 			/>
 		<swipeContent>
 			<Button
