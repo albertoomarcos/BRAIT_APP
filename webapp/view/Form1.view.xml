@@ -29,13 +29,17 @@
 					<core:Item text="{i18n>layoutCountryItaly}" />
 				</items>
 			</Select>
+			
+			<Button text="{i18n>layoutPublishButton}"
+			icon="sap-icon://outbox" type="Accept" />
+		<Button text="{i18n>layoutDraftButton}" icon="sap-icon://save" />
 		</f:content>
 	</f:SimpleForm>
-	<Toolbar>
+	<!--<Toolbar>
 		<ToolbarSpacer />
 		<Button text="{i18n>layoutPublishButton}"
 			icon="sap-icon://outbox" type="Accept" />
 		<Button text="{i18n>layoutDraftButton}" icon="sap-icon://save" />
-	</Toolbar>
+	</Toolbar>-->
 
 </mvc:View>
