@@ -1,6 +1,0 @@
-applications:
-- name: BRAIT_APP
-  memory: 512M
-  host: BRAIT-APP
-  path: webapp
-  domain: cfapps.eu10.hana.ondemand.com

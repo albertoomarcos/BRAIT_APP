@@ -1,0 +1,6 @@
+applications:
+- name: BRAIT_APP
+  memory: 64M
+  host: BRAIT-APP
+  buildpack: staticfile_buildpack
+  domain: cfapps.eu10.hana.ondemand.com
