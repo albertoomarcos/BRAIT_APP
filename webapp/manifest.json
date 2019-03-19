@@ -28,7 +28,7 @@
 		"rootView": {
 			"viewName": "brait_app.view.App",
 			"type": "XML",
-			"id": "app"
+			"id": "start"
 		},
 		"autoPrefixId": true,
 		"dependencies": {
@@ -84,7 +84,7 @@
 				"routerClass": "sap.m.routing.Router",
 				"viewType": "XML",
 				"viewPath": "brait_app.view",
-				"controlId": "app",
+				"controlId": "invoices",
 				"controlAggregation": "pages",
 				"async": true
 			},
