@@ -67,6 +67,11 @@
 			"prueba": {
 				"type": "sap.ui.model.json.JSONModel",
 				"uri": "model/facturas.json"
+			},
+			"jsonWEB":
+			{
+				"type": "sap.ui.model.json.JSONModel",
+				"uri": "http://brait.es/scpdev/facturas.json"
 			}
 		},
 		"resources": {

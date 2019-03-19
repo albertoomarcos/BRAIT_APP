@@ -1,6 +1,6 @@
 <mvc:View displayBlock="true" xmlns:mvc="sap.ui.core.mvc" xmlns:core="sap.ui.core" xmlns="sap.m" xmlns:l="sap.ui.layout"
 	controllerName="brait_app.controller.VPInvoices">
-	<List id="invoiceList" class="sapUiResponsiveMargin" width="auto" headerText="{i18n>productListTitle}"
+	<!--	<List id="invoiceList" class="sapUiResponsiveMargin" width="auto" headerText="{i18n>productListTitle}"
 		items="{ path: 'prueba>/Invoices', sorter: { path: 'ShipperName', group: true} }" growing="true" growingThreshold="5"
 		growingScrollToLoad="false">
 		<headerToolbar>
@@ -20,5 +20,46 @@
 				</firstStatus>
 			</ObjectListItem>
 		</items>
-	</List>
+	</List>-->
+	<Table id="invoiceList" class="sapUiResponsiveMargin" width="auto"
+		items="{ path: 'prueba>/Invoices', sorter: { path: 'ShipperName', group: true} }" growing="true" growingThreshold="5"
+		growingScrollToLoad="false">
+		<headerToolbar>
+			<Toolbar>
+				<Title text="{i18n>invoiceListTitle}"/>
+				<ToolbarSpacer/>
+				<SearchField width="50%" search="onFilterInvoices"/>
+			</Toolbar>
+		</headerToolbar>
+		<columns>
+			<Column hAlign="End" minScreenWidth="Small" demandPopin="true" width="6em">
+				<Text text="{i18n>columnQuantity}"/>
+			</Column>
+			<Column>
+				<Text text="{i18n>columnName}"/>
+			</Column>
+			<Column minScreenWidth="Small" demandPopin="true">
+				<Text text="{i18n>columnStatus}"/>
+			</Column>
+			<Column minScreenWidth="Tablet" demandPopin="false">
+				<Text text="{i18n>columnSupplier}"/>
+			</Column>
+			<Column hAlign="End">
+				<Text text="{i18n>columnPrice}"/>
+			</Column>
+		</columns>
+		<items>
+			<ColumnListItem type="Navigation" press="onPress">
+				<cells>
+					<ObjectNumber number="{prueba>Quantity} x" emphasized="false"/>
+					<ObjectIdentifier title="{prueba>ProductName}"/>
+					<Text text="{ path: 'prueba>Status', formatter: '.formatter.statusText' }"/>
+					<Text text="{prueba>ShipperName}"/>
+					<ObjectNumber
+						number="{ parts: [{path: 'prueba>ExtendedPrice'}, {path: 'view>/currency'}], type: 'sap.ui.model.type.Currency', formatOptions: { showMeasure: false } }"
+						unit="{view>/currency}" state="{= ${prueba>ExtendedPrice} > 10 ? 'Success' : 'Error' }"/>
+				</cells>
+			</ColumnListItem>
+		</items>
+	</Table>
 </mvc:View>

@@ -1,6 +1,6 @@
 sap.ui.define([
-
 "sap/ui/core/UIComponent"
+
 
 ], function(UIComponent) {
 
@@ -24,7 +24,6 @@ sap.ui.define([
 			this.getRouter().initialize();
 
 		}
-
 	});
 
 });

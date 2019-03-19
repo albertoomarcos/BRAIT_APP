@@ -3,6 +3,7 @@ sap.ui.define([
 	"sap/m/MessageToast",
 	"sap/ui/model/json/JSONModel",
 	"../model/formatterInvoices",
+	"sap/ui/core/UIComponent",
 	"sap/ui/model/Filter",
 	"sap/ui/model/FilterOperator"
 ], function (Controller, MessageToast, JSONModel, formatter, Filter, FilterOperator) {
