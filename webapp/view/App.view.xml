@@ -18,7 +18,7 @@
 									<App class="myAppDemoWT" id="app"/>
 								</IconTabFilter>
 								<IconTabFilter text="prueba" key="bd">
-								<!--	<mvc:XMLView viewName="brait_app.view.VPInvoices2"/>  -->
+									<mvc:XMLView viewName="brait_app.view.VPInvoices2"/>  
 								</IconTabFilter>
 							</items>
 						</IconTabBar>

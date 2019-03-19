@@ -1,0 +1,22 @@
+<mvc:View
+	displayBlock="true" 
+	xmlns:mvc="sap.ui.core.mvc" 
+	xmlns:core="sap.ui.core" 
+	xmlns="sap.m" 
+	xmlns:l="sap.ui.layout"
+	controllerName="brait_app.controller.VPInvoices2">
+	<List
+		headerText="Facturitas"
+		items="{/Invoices}" >
+		<StandardListItem
+			title="{ProductName}"
+			description="{Descripcion}"
+			/>
+		<swipeContent>
+			<Button
+				text="Delete Item"
+				type="Reject"
+				press="handleReject" />
+		</swipeContent>
+	</List>
+</mvc:View>
