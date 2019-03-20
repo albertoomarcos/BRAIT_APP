@@ -17,8 +17,11 @@
 									<!--<mvc:XMLView viewName="brait_app.view.VPInvoices"/>-->
 									<App class="myAppDemoWT" id="invoices"/>
 								</IconTabFilter>
-								<IconTabFilter text="prueba">
+								<IconTabFilter text="JSON from web">
 									<mvc:XMLView viewName="brait_app.view.VPInvoices2"/>  
+								</IconTabFilter>
+								<IconTabFilter text="prueba">
+									<mvc:XMLView viewName="brait_app.view.VSSqlUsers"/>
 								</IconTabFilter>
 							</items>
 						</IconTabBar>

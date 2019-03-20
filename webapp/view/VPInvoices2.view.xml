@@ -11,7 +11,7 @@
 		<StandardListItem
 			title="{jsonWEB>ProductName}"
 			description="{jsonWEB>Descripcion}"
-			/>
+		/>
 		<swipeContent>
 			<Button
 				text="Delete Item"
