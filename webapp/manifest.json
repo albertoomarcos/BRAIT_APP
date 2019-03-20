@@ -88,15 +88,22 @@
 				"controlAggregation": "pages",
 				"async": true
 			},
-			"routes": [{
+			"routes": [
+				{
 				"pattern": "",
 				"name": "overview",
 				"target": "overview"
-			}, {
+				},
+				{
+				"pattern": "users",
+  				 "name": "users",
+   				"target": "users"
+				},{
 				"pattern": "detail/{pruebaPath}",
 				"name": "detail",
 				"target": "detail"
-			}],
+				}
+			],
 			"targets": {
 				"overview": {
 					"viewID": "overview",
@@ -105,6 +112,9 @@
 				"detail": {
 					"viewId": "detail",
 					"viewName": "Detail"
+				},
+				"users": {
+				"viewName": "Users"
 				}
 			}
 		}

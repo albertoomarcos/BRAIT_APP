@@ -1,26 +1,7 @@
 <mvc:View
    xmlns="sap.m"
-   xmlns:mvc="sap.ui.core.mvc">
+   xmlns:mvc="sap.ui.core.mvc"
+   controllerName="brait_app.controller.VSSqlUsers">>
    <Text text="Hello World"/>
-   <List
-		headerText="Facturas json"
-		items="{jsonWEB>/Invoices}" >
-		<items>
-			<ObjectListItem
-				title="{jsonWEB>ProductName}"
-				type="Active"
-				number="{jsonWEB>Quantity}"
-				>
-				<firstStatus>
-					<ObjectStatus
-						text="{jsonWEB>Status}"
-					/>
-				</firstStatus>
-				<attributes>
-					<ObjectAttribute text="{jsonWEB>ExtendedPrice} x {jsonWEB>Quantity}" />
-					<ObjectAttribute text="{jsonWEB>ProductID} - {jsonWEB>ShipperName}" />
-				</attributes>
-			</ObjectListItem>
-		</items>
-	</List>
+   <Button text="Navigate to the second view" press="onPress" />
 </mvc:View>
