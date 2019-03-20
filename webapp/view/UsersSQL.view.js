@@ -3,8 +3,9 @@ sap.ui.jsview("view.UsersSQL", {
 		return "controller.UsersSQL";
 	},
 	createContent: function(oController) {
-		var currentView,footer,miFooter,miPagina,miLista,miApp;
+		var currentView,miFooter,miPagina,miLista,miApp;
 		currentView=this;
+		
  
         miFooter = new sap.m.Bar("idMiBar");
 		miPagina = new sap.m.Page("idMiPagina", {
@@ -26,6 +27,7 @@ sap.ui.jsview("view.UsersSQL", {
  
         currentView.destroyContent();
         currentView.addContent(miApp);
+        
     } 
 
 });

@@ -19,9 +19,7 @@
 			"tablet": true,
 			"phone": true
 		},
-		"supportedThemes": [
-			"sap_bluecrystal"
-		]
+		"supportedThemes": ["sap_bluecrystal"]
 	},
 	"sap.ui5": {
 		"_version": "1.2.0",
@@ -68,16 +66,15 @@
 				"type": "sap.ui.model.json.JSONModel",
 				"uri": "model/facturas.json"
 			},
-			"jsonWEB":
-			{
+			"jsonWEB": {
 				"type": "sap.ui.model.json.JSONModel",
 				"uri": "https://brait.cc/scpdev/facturas.json"
 			}
 		},
 		"resources": {
-				"css": [{
-					"uri": "css/style.css"
-				}]
+			"css": [{
+				"uri": "css/style.css"
+			}]
 		},
 		"routing": {
 			"config": {
@@ -88,22 +85,19 @@
 				"controlAggregation": "pages",
 				"async": true
 			},
-			"routes": [
-				{
+			"routes": [{
 				"pattern": "",
 				"name": "overview",
 				"target": "overview"
-				},
-				{
+			}, {
 				"pattern": "users",
-  				 "name": "users",
-   				"target": "users"
-				},{
+				"name": "users",
+				"target": "users"
+			}, {
 				"pattern": "detail/{pruebaPath}",
 				"name": "detail",
 				"target": "detail"
-				}
-			],
+			}],
 			"targets": {
 				"overview": {
 					"viewID": "overview",
@@ -114,7 +108,8 @@
 					"viewName": "Detail"
 				},
 				"users": {
-				"viewName": "Users"
+					"viewName": "UsersSQL",
+					"viewType": "JS"
 				}
 			}
 		}

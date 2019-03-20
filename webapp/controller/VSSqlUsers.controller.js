@@ -11,7 +11,7 @@ sap.ui.define([
 				},
 				onPress : function(oEvent) {
 					var oRouter = sap.ui.core.UIComponent.getRouterFor(this);
-					oRouter.getTargets().display("users")
+					oRouter.getTargets().display("users");
 				}
 			});
 		});

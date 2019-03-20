@@ -11,12 +11,6 @@ sap.ui.define([ "sap/ui/core/mvc/Controller", "sap/m/MessageToast" ], function(
 				dataType : "json",
 				async : false,
 				success : oController.renderDataCat,
-				error : function(xhr, ajaxOptions, thrownError) {
-					console.log(xhr);
-					console.log(ajaxOptions);
-					console.log(thrownError);
-				}
-
 			});
 		},
 		renderDataCat : function(data) {
