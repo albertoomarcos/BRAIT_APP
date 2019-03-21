@@ -6,6 +6,9 @@
 		"title": "{{appTitle}}",
 		"applicationVersion": {
 			"version": "1.0.0"
+		},
+		"crossNavigation": {
+			"inbounds": {}
 		}
 	},
 	"sap.ui5": {
@@ -26,6 +29,36 @@
 		},
 		"config": {
 			"fullWidth": true
+		},
+		"routing": {
+			"config": {
+				"routerClass": "sap.f.routing.Router",
+				"viewType": "XML",
+				"viewPath": "sap.ui.demo.fiori2.view",
+				"controlId": "flexibleColumnLayout",
+				"transition": "slide",
+				"bypassed": {},
+				"async": true
+			},
+			"routes": [{
+				"pattern": ":layout:",
+				"name": "master",
+				"target": ["master", "detail"]
+			}, {
+				"pattern": "detail/{product}/{layout}",
+				"name": "detail",
+				"target": ["master", "detail"]
+			}],
+			"targets": {
+				"master": {
+					"viewName": "Master",
+					"controlAggregation": "beginColumnPages"
+				},
+				"detail": {
+					"viewName": "Detail",
+					"controlAggregation": "midColumnPages"
+				}
+			}
 		},
 		"contentDensities": {
 			"compact": true,
