@@ -18,6 +18,7 @@ sap.ui.define([
 			// Save the current route name
 			this.currentRouteName = sRouteName;
 			this.currentProduct = oArguments.product;
+			this.currentSupplier = oArguments.supplier;
 		},
 
 		onStateChanged: function (oEvent) {
@@ -26,7 +27,7 @@ sap.ui.define([
 
 			// Replace the URL with the new layout if a navigation arrow was used
 			if (bIsNavigationArrow) {
-				this.oRouter.navTo(this.currentRouteName, {layout: sLayout, product: this.currentProduct}, true);
+				this.oRouter.navTo(this.currentRouteName, {layout: sLayout, product: this.currentProduct, supplier: this.currentSupplier}, true);
 			}
 		},
 

@@ -92,7 +92,7 @@
 									<m:Column/>
 								</m:columns>
 								<m:items>
-									<m:ColumnListItem type="Navigation">
+									<m:ColumnListItem type="Navigation" press=".onSupplierPress">
 										<m:cells>
 											<m:ObjectIdentifier text="{products>text}"/>
 										</m:cells>
