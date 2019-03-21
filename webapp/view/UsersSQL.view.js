@@ -1,33 +1,30 @@
-sap.ui.jsview("view.UsersSQL", {
-	getControllerName : function() {
-		return "controller.UsersSQL";
-	},
-	createContent: function(oController) {
-		var currentView,miFooter,miPagina,miLista,miApp;
-		currentView=this;
-		
- 
-        miFooter = new sap.m.Bar("idMiBar");
-		miPagina = new sap.m.Page("idMiPagina", {
-            title: "Ejemplo Llenar Lista - Desarrollo Hidrocálido",
-            showNavButton: false,
-            showHeader: true,
-            showFooter: true
-        });
-        var miLista = new sap.m.List("listaBebidas", {
-            headerText: "Lista de Bebidas",
-            mode: sap.m.ListMode.SingleSelectMaster,
-            itemPress: [oController.eventoPress, oController]
-        });           
-        miPagina.setFooter(miFooter);
-        miPagina.addContent(miLista);
-     
-        miApp = new sap.m.App("idMiApp");
-        miApp.addPage(miPagina);
- 
-        currentView.destroyContent();
-        currentView.addContent(miApp);
-        
-    } 
+sap.ui.jsview("brait_app.view.UsersSQL", {
+  getControllerName: function() {
+    return "brait_app.controller.UsersSQL";
+  },
+  createContent: function(oController) {
 
+    var oItem = new sap.m.ObjectListItem({
+      intro: "{desc}",
+      title: "{idCategoria}",
+      type: sap.m.ListType.Active,
+      press: oController.onItemPress
+    });
+	
+    var oList = new sap.m.List({
+      mode:  sap.m.ListMode.SingleSelectMaster    
+
+    });
+
+    //oList.bindItems("/categorias", oItem);
+    
+    return [oList];
+    /*
+    var oButton = new sap.m.Button({text:"Hello JS View"});
+      oButton.attachPress(oController.handleButtonClicked);
+      return oButton; */
+  },
+  onAfterRendering: function() {
+  }
 });
+//EventProvider.attachEvent: fnFunction must be a function

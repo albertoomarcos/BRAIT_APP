@@ -4,6 +4,7 @@
 	xmlns:core="sap.ui.core" 
 	xmlns="sap.m" 
 	xmlns:l="sap.ui.layout"
+	xmlns:semantic="sap.m.semantic"
 	controllerName="brait_app.controller.VPInvoices2">
 	<List
 		headerText="Facturas json"
@@ -19,4 +20,6 @@
 				press="handleReject" />
 		</swipeContent>
 	</List>
+	
+	
 </mvc:View>
