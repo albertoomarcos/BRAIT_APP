@@ -7,5 +7,8 @@
 		<beginColumnPages>
 			<mvc:XMLView id="beginView" viewName="sap.ui.demo.fiori2.view.Master"/>
 		</beginColumnPages>
+		<midColumnPages>
+			<mvc:XMLView id="detailView" viewName="sap.ui.demo.fiori2.view.Detail"/>
+		</midColumnPages>
 	</FlexibleColumnLayout>
 </mvc:View>
