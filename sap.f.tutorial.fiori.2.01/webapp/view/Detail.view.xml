@@ -9,6 +9,21 @@
 		headerContentPinnable="true" isChildPage="true" upperCaseAnchorBar="false">
 		<headerTitle>
 			<ObjectPageDynamicHeaderTitle>
+				<expandedHeading>
+					<m:Title text="{products>Name}" wrapping="true" class="sapUiSmallMarginEnd"/>
+				</expandedHeading>
+				<snappedHeading>
+					<m:FlexBox wrap="Wrap" fitContainer="true" alignItems="Center">
+						<m:FlexBox wrap="NoWrap" fitContainer="true" alignItems="Center" class="sapUiTinyMarginEnd">
+							<f:Avatar
+								src="https://sapui5.hana.ondemand.com/{products>ProductPicUrl}"
+								displaySize="S"
+								displayShape="Square"
+								class="sapUiTinyMarginEnd"/>
+							<m:Title text="{products>Name}" wrapping="true"/>
+						</m:FlexBox>
+					</m:FlexBox>
+				</snappedHeading>
 				<actions>
 					<m:ToggleButton text="Edit" type="Emphasized"/>
 					<m:Button text="Delete" type="Transparent"/>
@@ -19,15 +34,24 @@
 		</headerTitle>
 		<headerContent>
 			<m:FlexBox wrap="Wrap" fitContainer="true" alignItems="Stretch">
-				<f:Avatar displaySize="L" displayShape="Square" class="sapUiTinyMarginEnd"></f:Avatar>
-				<m:VBox justifyContent="Center" class="sapUiSmallMarginEnd">
+				<f:Avatar
+					src="https://sapui5.hana.ondemand.com/{products>ProductPicUrl}"
+					displaySize="L" 
+					displayShape="Square" 
+					class="sapUiTinyMarginEnd">
+				</f:Avatar>
+				<m:VBox 
+					justifyContent="Center" class="sapUiSmallMarginEnd">
 					<m:Label text="Main Category"/>
+					<m:Text text="{products>MainCategory}"/>
 				</m:VBox>
 				<m:VBox justifyContent="Center" class="sapUiSmallMarginEnd">
 					<m:Label text="Subcategory"/>
+					<m:Text text="{products>Category}"/>
 				</m:VBox>
 				<m:VBox justifyContent="Center" class="sapUiSmallMarginEnd">
 					<m:Label text="Price"/>
+					<m:ObjectNumber number="{products>CurrencyCode} {products>Price}" emphasized="false"/>
 				</m:VBox>
 			</m:FlexBox>
 		</headerContent>
@@ -36,12 +60,23 @@
 				<subSections>
 					<ObjectPageSubSection>
 						<blocks>
-							<form:SimpleForm maxContainerCols="2" editable="false" layout="ResponsiveGridLayout" labelSpanL="12" labelSpanM="12" emptySpanL="0"
-								emptySpanM="0" columnsL="1" columnsM="1">
+							<form:SimpleForm 
+								maxContainerCols="2" 
+								editable="false" 
+								layout="ResponsiveGridLayout" 
+								labelSpanL="12" 
+								labelSpanM="12" 
+								emptySpanL="0"
+								emptySpanM="0" 
+								columnsL="1" 
+								columnsM="1">
 								<form:content>
 									<m:Label text="Product ID"/>
+									<m:Text text="{products>ProductId}"/>
 									<m:Label text="Description"/>
+									<m:Text text="{products>Description}"/>
 									<m:Label text="Supplier"/>
+									<m:Text text="{products>SupplierName}"/>
 								</form:content>
 							</form:SimpleForm>
 						</blocks>
