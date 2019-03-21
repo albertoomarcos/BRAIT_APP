@@ -40,22 +40,33 @@
 				"bypassed": {},
 				"async": true
 			},
-			"routes": [{
-				"pattern": ":layout:",
-				"name": "master",
-				"target": ["master", "detail"]
-			}, {
-				"pattern": "detail/{product}/{layout}",
-				"name": "detail",
-				"target": ["master", "detail"]
-			},{
+			"routes": [
+				{
+					"pattern": "page2",
+					"name": "page2",
+					"target": "page2",
+					"layout": "EndColumnFullScreen"
+				},	
+				{
+					"pattern": "page2",
+					"name": "page2",
+					"target": "page2",
+					"layout": "EndColumnFullScreen"
+				},
+				{
+					"pattern": ":layout:",
+					"name": "master",
+					"target": ["master", "detail"]
+				}, 
+				{
+					"pattern": "detail/{product}/{layout}",
+					"name": "detail",
+					"target": ["master", "detail"]
+				}, 
+				{
 					"pattern": "detail/{product}/detailDetail/{supplier}/{layout}",
 					"name": "detailDetail",
-					"target": [
-						"master",
-						"detail",
-						"detailDetail"
-					]
+					"target": ["master", "detail", "detailDetail"]
 				}
 			],
 			"targets": {
@@ -70,6 +81,11 @@
 				"detailDetail": {
 					"viewName": "DetailDetail",
 					"controlAggregation": "endColumnPages"
+				},
+				"page2": {
+					"viewName": "AboutPage",
+					"controlAggregation": "endColumnPages",
+					"title": "AboutPage"
 				}
 			}
 		},

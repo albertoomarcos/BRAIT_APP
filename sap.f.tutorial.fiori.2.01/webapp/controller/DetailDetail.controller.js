@@ -1,7 +1,9 @@
 sap.ui.define([
 	"sap/ui/model/json/JSONModel",
-	"sap/ui/core/mvc/Controller"
-], function (JSONModel, Controller) {
+	"sap/ui/core/mvc/Controller",
+	"sap/f/library"
+
+], function (JSONModel, Controller,fioriLibrary) {
 	"use strict";
 
 	return Controller.extend("sap.ui.demo.fiori2.controller.DetailDetail", {
@@ -10,10 +12,12 @@ sap.ui.define([
 
 			this.oRouter = oOwnerComponent.getRouter();
 			this.oModel = oOwnerComponent.getModel();
-
+		
 			this.oRouter.getRoute("detailDetail").attachPatternMatched(this._onPatternMatch, this);
 		},
-
+		handleAboutPress: function () {
+			this.oRouter.navTo("page2", {layout: fioriLibrary.LayoutType.EndColumnFullScreen});
+		},
 		_onPatternMatch: function (oEvent) {
 			this._supplier = oEvent.getParameter("arguments").supplier || this._supplier || "0";
 			this._product = oEvent.getParameter("arguments").product || this._product || "0";
