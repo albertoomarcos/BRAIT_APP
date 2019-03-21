@@ -16,6 +16,8 @@ sap.ui.define([
 			UIComponent.prototype.init.apply(this, arguments);
 
 			// set products demo model on this sample
+			//url=https://openui5.hana.ondemand.com/test-resources/sap/ui/documentation/sdk/products.json
+			
 			oProductsModel = new JSONModel(sap.ui.require.toUrl('sap/ui/demo/mock') + '/products.json');
 			oProductsModel.setSizeLimit(1000);
 			this.setModel(oProductsModel, 'products');
