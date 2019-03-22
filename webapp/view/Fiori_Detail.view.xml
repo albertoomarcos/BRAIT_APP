@@ -1,4 +1,5 @@
 <mvc:View
+	controllerName="brait_app.controller.Fiori_Detail"
 	xmlns="sap.uxap"
 	xmlns:m="sap.m"
 	xmlns:f="sap.f"
@@ -17,7 +18,8 @@
 				<actions>
 					<m:ToggleButton
 						text="Edit"
-						type="Emphasized"/>
+						type="Emphasized"
+						press=".onEditToggleButtonPress"/>
 					<m:Button
 						text="Delete"
 						type="Transparent"/>
@@ -97,6 +99,14 @@
 				</subSections>
 			</ObjectPageSection>
 		</sections>
+		
+		<footer>
+			<m:OverflowToolbar>
+				<m:ToolbarSpacer/>
+				<m:Button type="Accept" text="Save"/>
+				<m:Button type="Reject" text="Cancel"/>
+			</m:OverflowToolbar>
+		</footer>
 
 	</ObjectPageLayout>
 </mvc:View>
