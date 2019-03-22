@@ -7,5 +7,8 @@
 		<beginColumnPages>
 			<mvc:XMLView id="beginView" viewName="brait_app.view.Fiori_Master"/>
 		</beginColumnPages>
+		<midColumnPages>
+			<mvc:XMLView id="detailView" viewName="brait_app.view.Fiori_Detail"/>
+		</midColumnPages>
 	</FlexibleColumnLayout>
 </mvc:View>

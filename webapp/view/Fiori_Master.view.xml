@@ -42,7 +42,7 @@
 						</Column>
 					</columns>
 					<items>
-						<ColumnListItem type="Navigation">
+						<ColumnListItem type="Navigation" press=".onListItemPress">
 							<cells>
 								<ObjectIdentifier title="{products>Name}" text="{products>ProductId}"/>
 								<ObjectNumber
