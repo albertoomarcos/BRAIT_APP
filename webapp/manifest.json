@@ -41,7 +41,8 @@
 				},
 				"sap.ui.layout": {
 					"minVersion": "1.34.0"
-				},"sap.f": {}
+				},"sap.f": {},
+				"sap.uxap": {}
 			}
 		},
 		"contentDensities": {
