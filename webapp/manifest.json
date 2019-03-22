@@ -89,7 +89,7 @@
 			},
 			"routes": [
 			{
-				"pattern": "",
+				"pattern": "overview",
 				"name": "overview",
 				"target": "overview"
 			}, 
