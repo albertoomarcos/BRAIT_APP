@@ -26,6 +26,7 @@
 		"rootView": {
 			"viewName": "brait_app.view.App",
 			"type": "XML",
+			"async": false,
 			"id": "start"
 		},
 		"autoPrefixId": true,
@@ -40,7 +41,7 @@
 				},
 				"sap.ui.layout": {
 					"minVersion": "1.34.0"
-				}
+				},"sap.f": {}
 			}
 		},
 		"contentDensities": {
