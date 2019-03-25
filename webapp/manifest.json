@@ -88,7 +88,7 @@
 				"async": true
 			},
 			"routes": [{
-				"pattern": "",
+				"pattern": ":layout:",
 				"name": "overview",
 				"target": "overview"
 			}, {
