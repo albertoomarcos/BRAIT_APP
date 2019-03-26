@@ -103,9 +103,74 @@
 								/>
 							</m:FlexBox>
 						</m:FlexBox>
+						<m:FlexBox
+							width="12rem"
+							height="10rem"
+							alignItems="Center"
+							justifyContent="Center"
+							direction="Column">
+							<m:Title
+								text="{
+									parts: [
+									'i18n>processFlowChartsFillLevel',
+									'business>/fillLevel/measure'
+									],
+									formatter: '.formatMessage'
+								}"
+								class="sapUiSmallMargin"/>
+							<m:FlexBox width="12rem" height="6rem" renderType="Bare">
+								<mc:LineMicroChart
+									size="Responsive"
+									threshold="{business>/fillLevel/threshold}"
+									leftTopLabel="{business>/fillLevel/valueBegin}"
+									leftBottomLabel="{business>/fillLevel/timeBegin}"
+									rightTopLabel="{business>/fillLevel/valueEnd}"
+									rightBottomLabel="{business>/fillLevel/timeEnd}"
+									color="{business>/fillLevel/color}"
+									showPoints="true"
+									points="{
+										path: 'business>/fillLevel/timeSeries',
+										templateShareable: true
+									}">
+									<mc:LineMicroChartPoint
+										x="{business>time}"
+										y="{business>level}"/>
+								</mc:LineMicroChart>
+							</m:FlexBox>
+						</m:FlexBox>
 					</m:HeaderContainer>
 				</m:headerContainer>
 			</m:ObjectHeader>
+			<m:Panel headerText="{i18n>processFlowProcessTitle}">
+				<ProcessFlow
+					id="processflow1"
+					scrollable="false"
+					nodes="{process>/Nodes}"
+					lanes="{process>/Lanes}"
+					nodePress=".onNodePressed">
+					<nodes>
+						<ProcessFlowNode
+							laneId="{process>lane}"
+							nodeId="{process>id}"
+							title="{process>title}"
+							titleAbbreviation="{process>titleAbbreviation}"
+							isTitleClickable="{process>isTitleClickable}"
+							children="{process>children}"
+							state="{process>state}"
+							stateText="{process>stateText}"
+							texts="{process>texts}"
+							highlighted="{process>highlighted}"
+							focused="{process>focused}"/>
+					</nodes>
+					<lanes>
+						<ProcessFlowLaneHeader
+							laneId="{process>id}"
+							iconSrc="{process>icon}"
+							text="{process>label}"
+							position="{process>position}"/>
+					</lanes>
+				</ProcessFlow>
+			</m:Panel>
 		</m:content>
 	</m:Page>
 </mvc:View>
