@@ -3,9 +3,9 @@
 	xmlns="sap.m"
 	displayBlock="true">
 
-	<Shell>
+	<!-- <Shell> -->
 		<App id="tutorialApp"
 			 backgroundImage="images/startpage.jpg"
 			 backgroundOpacity="0.3"/>
-	</Shell>
+	<!-- </Shell> -->
 </mvc:View>
