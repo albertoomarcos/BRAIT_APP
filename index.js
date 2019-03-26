@@ -7,14 +7,14 @@ sap.ui.define([
 	new Button({
 		text: "APLICACION HELADOS",
 		press: function () {
-			sap.m.URLHelper.redirect("../../SmartControls/webapp/index.html");
+			sap.m.URLHelper.redirect("/SmartControls/webapp/index.html");
 		}
 	}).placeAt("content");
 	
 	new Button({
 		text: "APLICACION BRAIT",
 		press: function () {
-			sap.m.URLHelper.redirect("../../Brait_app/webapp/index.html");
+			sap.m.URLHelper.redirect("/Brait_app/webapp/index.html");
 		}
 	}).placeAt("content");
 
