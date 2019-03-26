@@ -1,6 +1,7 @@
 sap.ui.define([
-	"sap/ui/core/mvc/Controller"
-], function (Controller) {
+	"sap/ui/core/mvc/Controller",
+	"sap/ui/core/format/NumberFormat"
+], function (Controller, NumberFormat) {
 	"use strict";
 
 	return Controller.extend("sap.suite.ui.commons.demokit.tutorial.icecream.01.controller.Startpage", {
@@ -20,6 +21,13 @@ sap.ui.define([
 		},
 		getEntityCount: function (entities) {
 			return entities && entities.length || 0;
-		}
+		},
+		formatNumber: function(value) {
+            var oFloatFormatter = NumberFormat.getFloatInstance({
+                style: "short",
+                decimals: 1
+            });
+            return oFloatFormatter.format(value);
+        }
 	});
 });
