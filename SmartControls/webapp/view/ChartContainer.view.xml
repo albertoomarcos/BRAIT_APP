@@ -1,0 +1,16 @@
+<mvc:View
+	xmlns:mvc="sap.ui.core.mvc"
+	xmlns="sap.m"
+	xmlns:l="sap.ui.layout">
+	<Page
+		title="{i18n>chartContainerPageTitle}"
+		backgroundDesign="Solid">
+		<content>
+			<l:Grid defaultSpan="L12 M12 S12"
+				class="sapUiResponsiveMargin"
+				vSpacing="0"
+				hSpacing="0">
+			</l:Grid>
+		</content>
+	</Page>
+</mvc:View>

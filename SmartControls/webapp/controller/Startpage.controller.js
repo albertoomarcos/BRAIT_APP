@@ -42,6 +42,20 @@ sap.ui.define([
         formatJSONDate: function(date) {
             var oDate = new Date(Date.parse(date));
             return oDate.toLocaleDateString();
+        },
+        onNavToProcessFlow: function() {
+            this.getRouter().navTo("processFlow");
+        },
+
+        onNavToChartContainer: function() {
+            this.getRouter().navTo("chartContainer");
+        },
+        onNavToReviews: function() {    
+            this.getRouter().navTo("reviews");
+        },
+    
+        getRouter: function() {
+            return this.getOwnerComponent().getRouter();
         }
 	});
 });

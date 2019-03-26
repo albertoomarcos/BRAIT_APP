@@ -14,7 +14,8 @@
 				<GenericTile
                     class="sapUiTinyMarginBegin sapUiTinyMarginTop"
                     header="{i18n>startpagePFTileTitle}"
-                    subheader="{i18n>startpagePFTileSubTitle}">
+                    subheader="{i18n>startpagePFTileSubTitle}"
+                    press=".onNavToProcessFlow">
                     <tileContent>
                         <TileContent>
                             <content>
@@ -31,7 +32,8 @@
                 </GenericTile>
                 <GenericTile
                      class="sapUiTinyMarginBegin sapUiTinyMarginTop"
-                     header="{i18n>startpageUserReviewsTileTitle}">
+                     header="{i18n>startpageUserReviewsTileTitle}"
+                     press=".onNavToReviews">
                      <tileContent>
                          <TileContent>
                              <content>
@@ -94,7 +96,8 @@
                  <GenericTile
                     class="sapUiTinyMarginBegin sapUiTinyMarginTop"
                     header="{i18n>startpageTestResultsTileTitle}"
-                    subheader="{i18n>startpageTestResultsTileSubTitle}">
+                    subheader="{i18n>startpageTestResultsTileSubTitle}"
+                    press=".onNavToChartContainer">
                     <tileContent>
                         <TileContent>
                             <content>
@@ -129,6 +132,21 @@
                 </SlideTile>
                  
 			</layout:HorizontalLayout>
+			<Title
+                titleStyle="H2"
+                text="{i18n>startpageLinksGroupTitle}"
+                class="sapUiTinyMarginBegin sapUiMediumMarginTop" />
+            <layout:HorizontalLayout allowWrapping="true">
+                <GenericTile
+                    header="{i18n>startpageLineTile1Title}"
+                    subheader="{i18n>startpageLineTile1SubTitle}"
+                    mode="LineMode"
+                    class="sapUiTinyMarginBegin" />
+                <GenericTile
+                    header="{i18n>startpageLineTile2Title}"
+                    mode="LineMode"
+                    class="sapUiTinyMarginBegin" />
+            </layout:HorizontalLayout>
 		</layout:VerticalLayout>
 	</Page>
 </mvc:View>
