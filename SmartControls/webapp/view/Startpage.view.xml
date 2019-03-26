@@ -28,6 +28,23 @@
                         </TileContent>
                     </tileContent>
                 </GenericTile>
+                <GenericTile
+                     class="sapUiTinyMarginBegin sapUiTinyMarginTop"
+                     header="{i18n>startpageUserReviewsTileTitle}">
+                     <tileContent>
+                         <TileContent>
+                             <content>
+                                 <NumericContent
+                                     value="{
+                                         path: 'reviews>/UserReviews',
+                                         formatter: '.getEntityCount'
+                                     }"
+                                         indicator="None"
+                                         valueColor="Neutral" />
+                             </content>
+                         </TileContent>
+                     </tileContent>
+                 </GenericTile>
 			</layout:HorizontalLayout>
 		</layout:VerticalLayout>
 	</Page>
