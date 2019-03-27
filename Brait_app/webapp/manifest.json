@@ -41,7 +41,8 @@
 				},
 				"sap.ui.layout": {
 					"minVersion": "1.34.0"
-				},"sap.f": {},
+				},
+				"sap.f": {},
 				"sap.uxap": {}
 			}
 		},
@@ -87,41 +88,20 @@
 				"controlAggregation": "pages",
 				"async": true
 			},
-			"routes": [
-			{
-				"pattern": "overview",
+			"routes": [{
+				"pattern": "",
 				"name": "overview",
 				"target": "overview"
-			}, 
-			{
+			}, {
 				"pattern": "users",
 				"name": "users",
 				"target": "users"
-			}, 
-			{
+			}, {
 				"pattern": "detail/{pruebaPath}",
 				"name": "detail",
 				"target": "detail"
-			},
-			{
-				"pattern": ":layout:",
-				"name": "master",
-				"target": [
-					"master",
-					"fioridetail"
-				]
-			},
-			{
-				"pattern": "fioridetail/{product}/{layout}",
-				"name": "fioridetail",
-				"target": [
-					"master",
-					"fioridetail"
-				]
-			}
-			],
-			"targets": 
-			{
+			}],
+			"targets": {
 				"overview": {
 					"viewID": "overview",
 					"viewName": "Overview"
@@ -133,14 +113,6 @@
 				"users": {
 					"viewName": "UsersSQL",
 					"viewType": "JS"
-				},
-				"master": {
-					"viewName": "Fiori_Master",
-					"controlAggregation": "beginColumnPages"
-				},
-				"fioridetail": {
-					"viewName": "Fiori_Detail",
-					"controlAggregation": "midColumnPages"
 				}
 			}
 		}

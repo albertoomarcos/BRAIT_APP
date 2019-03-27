@@ -20,9 +20,6 @@
 								<IconTabFilter text="JSON from web">
 									<mvc:XMLView viewName="brait_app.view.VPInvoices2"/>  
 								</IconTabFilter>
-								<IconTabFilter text="prueba">
-									<mvc:XMLView viewName="brait_app.view.Fiori_App"/>
-								</IconTabFilter>
 							</items>
 						</IconTabBar>
 					</content>
