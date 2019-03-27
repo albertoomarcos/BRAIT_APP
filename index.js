@@ -17,5 +17,12 @@ sap.ui.define([
 			sap.m.URLHelper.redirect("/Brait_app/webapp/index.html");
 		}
 	}).placeAt("content");
+	
+	new Button({
+		text: "APLICACION FIORI2",
+		press: function () {
+			sap.m.URLHelper.redirect("/Fiori2/webapp/index.html");
+		}
+	}).placeAt("content");
 
 });
