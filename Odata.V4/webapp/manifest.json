@@ -11,10 +11,11 @@
 		"description": "{{appDescription}}",
 		"dataSources": {
 			"ZMIS_TEXTOS_SRV": {
-				"uri": "/sap/opu/odata/sap/ZMIS_TEXTOS_SRV/",
+				"uri": "http://192.168.5.151:8000/sap/opu/odata/sap/ZMIS_TEXTOS_SRV/",
 				"type": "OData",
 				"settings": {
-					"localUri": "localService/ZMIS_TEXTOS_SRV/metadata.xml"
+					"uri": "http://192.168.5.151:8000/sap/opu/odata/sap/ZMIS_TEXTOS_SRV/$metadata?",
+					"annotations": []
 				}
 			}
 		},
@@ -57,15 +58,6 @@
 					"bundleName": "sap.ui.core.tutorial.odatav4.i18n.i18n"
 				}
 			},
-			"": {
-				"dataSource": "default",
-				"settings": {
-					"autoExpandSelect": true,
-					"operationMode": "Server",
-					"groupId": "$direct",
-					"synchronizationMode": "None"
-				}
-			},
 			"_Mis_Textos": {
 				"type": "sap.ui.model.odata.v2.ODataModel",
 				"settings": {
@@ -73,8 +65,7 @@
 					"defaultBindingMode": "OneWay",
 					"defaultCountMode": "Request"
 				},
-				"dataSource": "ZMIS_TEXTOS_SRV",
-				"preload": true
+				"dataSource": "ZMIS_TEXTOS_SRV"
 			}
 		},
 		"flexEnabled": true

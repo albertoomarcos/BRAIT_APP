@@ -27,14 +27,15 @@ sap.ui.define([
 		{
 			var oServiceConfig = this.oComponent.getMetadata().getConfig().serviceConfig;
 			var sServiceUrl = oServiceConfig.serviceUrl;
-			var oDataModel = new sap.ui.model.odata.v2.ODataModel(sServiceUrl);
+			var oDataModel = new sap.ui.model.odata.v4.ODataModel(sServiceUrl);
 			this.oView.setModel(oDataModel);
 		},
 		cargarDatosVarios : function()
 		{
 			var that = this;
 			var oModel = this.oView.getModel();
-			oModel.read("/TextosGeneralesSet",{
+			alert(oModel);
+			oModel.read("/TextosGeneralesSet" , {
 				success: function(data){
 					MessageToast.show("Leyendo datos");
 					var oDatosVarios = {
