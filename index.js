@@ -27,5 +27,11 @@ sap.ui.define([
 			sap.m.URLHelper.redirect("/Fiori2/webapp/index.html");
 		}
 	}).placeAt("content");
-
+	new Button({
+		text: "APLICACION Prueba",
+		press: function () {
+			MessageToast.show("Abriendo...");
+			sap.m.URLHelper.redirect("/Odata.V4/webapp/index.html");
+		}
+	}).placeAt("content");
 });
