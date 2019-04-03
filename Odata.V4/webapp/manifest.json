@@ -12,11 +12,7 @@
 		"dataSources": {
 			"ZMIS_TEXTOS_SRV": {
 				"uri": "http://192.168.5.151:8000/sap/opu/odata/sap/ZMIS_TEXTOS_SRV/",
-				"type": "OData",
-				"settings": {
-					"uri": "http://192.168.5.151:8000/sap/opu/odata/sap/ZMIS_TEXTOS_SRV/$metadata?",
-					"annotations": []
-				}
+				"type": "OData"
 			}
 		},
 		"sourceTemplate": {

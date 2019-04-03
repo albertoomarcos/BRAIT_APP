@@ -25,16 +25,13 @@ sap.ui.define([
 		},
 		cargarTabla : function()
 		{
-			var oServiceConfig = this.oComponent.getMetadata().getConfig().serviceConfig;
-			var sServiceUrl = oServiceConfig.serviceUrl;
-			var oDataModel = new sap.ui.model.odata.v4.ODataModel(sServiceUrl);
+			var oDataModel = new sap.ui.model.odata.v2.ODataModel("http://192.168.5.151:8000/sap/opu/odata/sap/ZMIS_TEXTOS_SRV");
 			this.oView.setModel(oDataModel);
 		},
 		cargarDatosVarios : function()
 		{
 			var that = this;
 			var oModel = this.oView.getModel();
-			alert(oModel);
 			oModel.read("/TextosGeneralesSet" , {
 				success: function(data){
 					MessageToast.show("Leyendo datos");
