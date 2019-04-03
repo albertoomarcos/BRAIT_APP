@@ -1,0 +1,10 @@
+<mvc:View
+	controllerName="sap.ui.core.tutorial.odatav4.controller.App"
+	xmlns:mvc="sap.ui.core.mvc"
+	xmlns="sap.m">
+	<App id="_IDEGen_app0">
+		<pages>
+			
+		</pages>
+	</App>
+</mvc:View>
