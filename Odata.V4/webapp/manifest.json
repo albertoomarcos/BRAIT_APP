@@ -11,7 +11,7 @@
 		"description": "{{appDescription}}",
 		"dataSources": {
 			"ZMIS_TEXTOS_SRV": {
-				"uri": "http://192.168.5.151:8000/sap/opu/odata/sap/ZMIS_TEXTOS_SRV/",
+				"uri": "https://192.168.5.151:5200/sap/opu/odata/sap/ZMIS_TEXTOS_SRV/",
 				"type": "OData"
 			}
 		},
