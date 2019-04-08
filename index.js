@@ -31,7 +31,7 @@ sap.ui.define([
 		text: "APLICACION Prueba",
 		press: function () {
 			MessageToast.show("Abriendo...");
-			sap.m.URLHelper.redirect("/Odata.V4/webapp/index.html");
+			sap.m.URLHelper.redirect("/MisTextos/webapp/index.html");
 		}
 	}).placeAt("content");
 });
