@@ -5,7 +5,7 @@
       "path": "/sap/opu/odata",
       "target": {
         "type": "destination",
-        "name": "B41",
+        "name": "B41HTTPS",
         "entryPath": "/sap/opu/odata"
       },
       "description": "ABAP"
