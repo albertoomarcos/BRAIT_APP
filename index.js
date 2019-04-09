@@ -28,10 +28,10 @@ sap.ui.define([
 		}
 	}).placeAt("content");
 	new Button({
-		text: "APLICACION Prueba",
+		text: "APLICACION NOTICIAS",
 		press: function () {
 			MessageToast.show("Abriendo...");
-			sap.m.URLHelper.redirect("/MisTextos/webapp/index.html");
+			sap.m.URLHelper.redirect("/Noticias/webapp/index.html");
 		}
 	}).placeAt("content");
 });
